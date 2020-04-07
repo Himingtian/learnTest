@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    name: HikariDataSource
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 30000
+      auto-commit: true
+      max-lifetime: 1800000
+      pool-name: DatebookHikariCP
+      minimum-idle: 5
+      connection-test-query: SELECT 1
+      idle-timeout: 30000
+      maximum-pool-size: 15
+      password: zhou10086
+      username: root
+      jdbc-url: jdbc:mysql://localhost:3306/chenpihui?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  #mapper-locations: classpath*:/mapper/*.xml
+  type-aliases-package: com.chenpihui.pojo.entity
+  global-config:
+    db-config:
+      logic-delete-value: 1 #逻辑已删除
+      logic-not-delete-value: 0 #逻辑未删除

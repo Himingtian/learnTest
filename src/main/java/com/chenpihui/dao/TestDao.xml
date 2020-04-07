@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chenpihui.dao.TestDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.chenpihui.pojo.entity.Test">
+        <id column="id" property="id" />
+        <result column="test_one" property="testOne" />
+        <result column="test_two" property="testTwo" />
+        <result column="test" property="test" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, test_one, test_two, test
+    </sql>
+
+</mapper>
